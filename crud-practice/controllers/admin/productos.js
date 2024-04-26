@@ -21,20 +21,20 @@ const fillTable = async (form = null) => {
         // Se recorre el conjunto de registros (dataset) fila por fila a través del objeto row.
         DATA.dataset.forEach(row => {
             // Se establece un icono para el estado del producto.
-            (row.estado_producto) ? icon = 'bi bi-eye-fill' : icon = 'bi bi-eye-slash-fill';
+            (row.estado) ? icon = 'bi bi-eye-fill' : icon = 'bi bi-eye-slash-fill';
             // Se crean y concatenan las filas de la tabla con los datos de cada registro.
             TABLE_BODY.innerHTML += `
             <tr>
                 <td id="nombre">
-                ${row.nombre_producto}
+                ${row.producto}
                 </td>
 
                 <td id="precio">
-                ${row.nombre_precio}
+                ${row.precio}
                 </td>
 
                 <td id="marca"">
-                ${row.nombre_marca}
+                ${row.marca}
                 </td>
                 
                 <td>
